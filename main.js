@@ -1,8 +1,5 @@
-console.log("Hello");
 
-function moreCrap () {
-	console.log("crap");
-}
+
 
 
 // let Something = (function(oldSomething){
@@ -18,33 +15,13 @@ function moreCrap () {
 // })(Something || {});
 
 
-var SolarSystem = (function(oldSolarSystem){
-	const planets = ["mercury", "venus", "Earh", "Mars", "Jupiter", "saturn", "Uranus", "Neptre"];
-	const spacecraft = ["rocket", "Apollo", "Mission"];
 
-	oldSolarSystem.getPlanets = function() {
-		return planets
-	}
-
-	oldSolarSystem.setPlanet = function(newPlanet){
-		planets.push(newPlanet);
-	}
-
-	
-	
-	oldSolarSystem.getSpacecraft = function() {
-		return spacecraft;
-	}
-	oldSolarSystem.setSpacecraft = function(newSpacecraft) {
-		spacecraft.push(newSpacecraft);
-	}
-	
-
-	return oldSolarSystem;
-})(SolarSystem || {});
-
+SolarSystem.setPlanet("Pluto");
 let myPlanets = SolarSystem.getPlanets();
 console.log("My planets", myPlanets);
 
+let mySpacecraft = SolarSystem.getSpacecraft();
+console.log("mySpacecraft", mySpacecraft);
 
-
+let myStars = SolarSystem.getStars();
+console.log("My stars", myStars);
